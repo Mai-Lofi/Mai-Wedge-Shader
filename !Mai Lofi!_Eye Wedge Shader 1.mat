@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: '!Mai Lofi!_Eye Wedge Shader'
+  m_Name: '!Mai Lofi!_Eye Wedge Shader 1'
   m_Shader: {fileID: 4800000, guid: 49b9299287ff8c24d99e0ed66d67eeea, type: 3}
-  m_ShaderKeywords: _EYETYPE1_ON
+  m_ShaderKeywords: _EYETYPE1_ON _EYETYPE3_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -42,13 +42,13 @@ Material:
     m_Floats:
     - _EyeType1: 1
     - _EyeType2: 0
-    - _EyeType3: 0
-    - _NoiseMapStrength: 0.395
-    - _RingPanner: 0.137
+    - _EyeType3: 1
+    - _NoiseMapStrength: 0.177
+    - _RingPanner: 0.234
     - __dirty: 1
-    - _emiss: 2.16
+    - _emiss: 2.98
     m_Colors:
     - _NoiseMapPannerSpeed: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _NoiseMapSize: {r: 1, g: 1, b: 0, a: 0}
     - _RingPannerSpeed: {r: 1, g: 0, b: 0, a: 0}
-    - _Tint: {r: 0, g: 0.74509805, b: 0.004820936, a: 0}
+    - _Tint: {r: 0.74509805, g: 0, b: 0.3863716, a: 0}
