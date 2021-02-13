@@ -36,15 +36,7 @@ public class MaiWedgeGUI : ShaderGUI
     private MaterialProperty _RingPannerSpeed;    
     private MaterialProperty _BaseTexture;
     
-    // private MaterialProperty _NormalTex;
-    //private MaterialProperty _NoiseMapStrength;
-    // private MaterialProperty _NormalPan;
-    // private MaterialProperty _texcoord;
-    // private MaterialProperty _NoisePan;
     private MaterialProperty _NoiseMapSize;
-    // private MaterialProperty _NoiseTexture;
-    // private MaterialProperty _MaiSwitch;
-    // private MaterialProperty _EyeType1Enable;
     private MaterialProperty __dirty;
 
     private void DrawInfo(string text1, string text2, string URL)
@@ -161,45 +153,24 @@ public class MaiWedgeGUI : ShaderGUI
 
         EditorGUILayout.BeginVertical("GroupBox");
 
-        Header("Main Glass Settings");
 
-        editor.ShaderProperty(_Tint, MakeLabel(_Tint)); //maiadd
 
+        MaiSub("Eye Mode!"); 
         editor.ShaderProperty(_EyeType1, "Eye Mode 1"); //maiadd
         editor.ShaderProperty(_EyeType2, "Eye Mode 2"); //maiadd
         editor.ShaderProperty(_EyeType3, "Eye Mode 3"); //maiadd
-        //editor.ShaderProperty(_NoiseMapStrength, "NoiseMapStrength"); //maiadd
-        // editor.ShaderProperty(_EyeType2, "EyeType2 (keep low)"); //maiadd
 
+        MaiSub("Main settings!"); 
+        editor.ShaderProperty(_Tint, MakeLabel(_Tint)); //maiadd
 
         editor.ShaderProperty(_RingPanner, MakeLabel(_RingPanner)); //maiadd
-        // editor.ShaderProperty(_EyeType3, MakeLabel(_EyeType3)); //maiadd
-        
-        // MaiSub("Normal");
+
 
         editor.ShaderProperty(_NoiseMapStrength, "Noise Strength"); //maiadd
         editor.ShaderProperty(_emiss, "Emission"); //maiadd
-        // editor.ShaderProperty(_NormalTex, "Normal Texture"); //maiadd
-        // editor.ShaderProperty(_NormalPan, "Normal Panning"); //maiadd    
-
-        // MaiSub("Reflections"); 
-
-        // editor.ShaderProperty(_Opacity, "Opacity"); //maiadd 
-        // editor.ShaderProperty(_EyeType1Enable, "Enable Cube map"); //maiadd          
-        // editor.ShaderProperty(_EyeType1, "Reflection EyeType1"); //maiadd
-
-        // MaiSub("emiss"); 
-        // editor.ShaderProperty(_RingPannerSpeed, "emiss Strength"); //maiadd  
-        // editor.ShaderProperty(_emiss, "emiss Color"); //maiadd 
-
-        // MaiSub("Noise");
-        // editor.ShaderProperty(_MaiSwitch, "Noise Toggle (Req normal strength)"); //maiadd         
-        // editor.ShaderProperty(_NoiseTexture, "Noise Texture"); //maiadd 
-        editor.ShaderProperty(_NoiseMapSize, "Noise Map Size"); //maiadd 
-        // editor.ShaderProperty(_NoisePan, "Noise Pan Speed"); //maiadd 
 
 
-        // EditorGUILayout.EndVertical();
+        EditorGUILayout.EndVertical();
 
         DrawInfo("Info", "Open Patreon", "https://www.patreon.com/Mai_Lofi");
 
@@ -226,18 +197,9 @@ public class MaiWedgeGUI : ShaderGUI
         _EyeType2 = FindProperty("_EyeType2", properties);
         _EyeType3 = FindProperty("_EyeType3", properties);
         _RingPanner = FindProperty("_RingPanner", properties);
-//        _Opacity = FindProperty("_Opacity", properties);
         _emiss = FindProperty("_emiss", properties);
         _RingPannerSpeed = FindProperty("_RingPannerSpeed", properties);
-        // _NormalTex = FindProperty("_NormalTex", properties);
-        //_NoiseMapStrength = FindProperty("_NoiseMapStrength", properties);
-        // _NormalPan = FindProperty("_NormalPan", properties);
-        // _texcoord = FindProperty("_texcoord", properties);
         _NoiseMapSize = FindProperty("_NoiseMapSize", properties);
-        // _NoisePan = FindProperty("_NoisePan", properties);
-        // _NoiseTexture = FindProperty("_NoiseTexture", properties);
-        // _MaiSwitch = FindProperty("_MaiSwitch", properties);
-        // _EyeType1Enable = FindProperty("_EyeType1Enable", properties);
         __dirty = FindProperty("__dirty", properties);
 
     }
